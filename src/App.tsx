@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import * as React from 'react';
 
 import './style.css';
 import JobDetailsComponent from './components/JobDetailsComponents';
@@ -14,15 +14,15 @@ type mango = keyof { name: 'asdfsdf' };
 
 const a: mango = 'name';
 
-export const App: FC<{ name: string }> = ({ name }) => {
+export const App: React.FC<{ name: string }> = ({ name }) => {
   return (
     <div>
       <h1>Hello {name}!</h1>
 
-      <JobDetailsComponent
+      {/* <JobDetailsComponent
         job={'doctor'}
         personDetails={{ doctorDegree: 'MD', doctorType: 'Mll' }}
-      />
+      /> */}
 
       <InfoDisplay type="user" data={{ age: 24, name: 'avinash' }} />
 
